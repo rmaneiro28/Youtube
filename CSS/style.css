@@ -1,0 +1,226 @@
+/*--------- Estilos Generales --------------*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+/*--------- Contenedor --------------*/
+.contenedor {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 90px auto;
+  grid-template-rows: 60px auto;
+  grid-template-areas:
+    "header header"
+    "menu contenido";
+  transition: all 0.3s ease;
+}
+
+.contenedor.active {
+  grid-template-columns: 240px auto;
+}
+/*--------- Header --------------*/
+.header {
+  grid-area: header;
+  background: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 20px;
+  padding: 0 20px;
+  grid-template-areas: "logo busqueda iconos";
+}
+
+.header .logo .fab {
+  color: #ff0000;
+  font-size: 22px;
+}
+
+.header .logo {
+  grid-area: logo;
+}
+.header .logo .boton-menu {
+  padding: 0px;
+  border: none;
+  background: none;
+  margin: 0px;
+}
+.header .logo i.fas {
+  margin-right: 20px;
+  color: #606060;
+  font-size: 18px;
+  border-radius: 100px;
+  padding: 10px;
+}
+
+.header .logo i.fas:hover {
+  background: #ccc;
+}
+
+.header .logo span {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.12em;
+  font-size: 19px;
+  font-weight: 500;
+}
+.header .barra-busqueda {
+  grid-area: busqueda;
+  display: flex;
+  justify-content: center;
+}
+
+.header .barra-busqueda input {
+  min-width: 60%;
+  padding: 0 15px;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 3px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.header .barra-busqueda .fas {
+  height: 35px;
+  border: 1px solid #ccc;
+  border-left: none;
+  color: #a8a5a5;
+  background: #f8f8f8;
+  padding: 0 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.header .barra-busqueda .fas:hover {
+  background: #e7e7e7;
+  color: #606060;
+}
+.header .iconos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .iconos img {
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+}
+.header .iconos .fas {
+  color: #606060;
+}
+.header .iconos .fas:hover {
+  background: #ccc;
+}
+.header .iconos .fas {
+  border-radius: 100px;
+  padding: 10px;
+  margin-right: 20px;
+}
+/*--------- Menu Lateral --------------*/
+.menu {
+  grid-area: menu;
+  background: #fff;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 35px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 240px;
+  height: 40px;
+}
+.menu a.active {
+  background: #e5e5e5;
+}
+.menu a:hover {
+  background: #e5e5e5;
+}
+.menu a i.active {
+  color: #ff0000;
+}
+
+.menu a i {
+  font-size: 18px;
+  margin-right: 24px;
+  color: #606060;
+}
+hr {
+  margin: 12px 0px;
+  color: #f9f9f9;
+  width: 240px;
+}
+.menu img {
+  border-radius: 100px;
+  width: 25px;
+  height: 25px;
+  margin-right: 24px;
+}
+
+.menu h4 {
+  color: #606060;
+  display: block;
+  padding: 10px 35px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.menu a.channels {
+  display: flex;
+  align-items: center;
+}
+/*--------- Contenido Principal --------------*/
+.main {
+  grid-area: contenido;
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  background: #f9f9f9;
+  grid-gap: 15px;
+}
+
+.main .card {
+  width: 253px;
+  height: 254px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.main .card-image {
+  background-image: url(https://via.placeholder.com/253x142);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main .card .card-title {
+  width: 253px;
+  height: 112px;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+}
+
+.main .card .card-title p {
+  font-size: 1rem;
+}
+.main .card .card-title-img img {
+  border-radius: 100px;
+  width: 36px;
+  height: 36px;
+  margin-right: 24px;
+}
